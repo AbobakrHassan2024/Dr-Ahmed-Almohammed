@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+    <title>د. أحمد المحمد | استشاري الجلدية والتجميل</title>
+    <meta name="description" content="د. أحمد المحمد - استشاري الجلدية والتجميل، البورد السعودي والعربي. خبرة في الحقن التجميلي، الليزر، وعلاج مشاكل البشرة والشعر." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: { cairo: ['Cairo', 'sans-serif'] },
+                    colors: {
+                        gold: '#D4AF37',
+                        'gold-light': '#F3E5AB',
+                        'gold-dark': '#B8960F',
+                        emerald: '#0D9488',
+                        'emerald-dark': '#0F766E',
+                        navy: '#0B1A30',
+                        'navy-light': '#1A2D4A',
+                        cream: '#FDF8F0',
+                        charcoal: '#1E1E2A',
+                    },
+                    boxShadow: {
+                        'premium': '0 20px 60px -15px rgba(0,0,0,0.3)',
+                        'glow': '0 0 40px rgba(212, 175, 55, 0.15)',
+                    },
+                    backgroundImage: {
+                        'hero-pattern': "radial-gradient(ellipse at 20% 50%, rgba(212,175,55,0.08) 0%, transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(13,148,136,0.06) 0%, transparent 50%)",
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* RESET & BASE */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: #faf8f5;
+            color: #1e1e2a;
+            transition: background 0.3s, color 0.3s;
+            padding-bottom: 76px;
+        }
+        .dark body {
+            background: #0f172a;
+            color: #e2e8f0;
+        }
+        ::selection {
+            background: #D4AF37;
+            color: #0B1A30;
+        }
+
+        /* SCROLLBAR */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f0ede8;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D4AF37;
+            border-radius: 10px;
+        }
+        .dark ::-webkit-scrollbar-track {
+            background: #1e293b;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #b8960f;
+        }
+
+        /* PAGE SECTIONS */
+        .page-section {
+            display: none;
+            animation: fadeSlide 0.7s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+        }
+        .page-section.active {
+            display: block;
+        }
+        @keyframes fadeSlide {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* NAVBAR */
+        .navbar-glass {
+            background: rgba(255, 252, 248, 0.92);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.04);
+        }
+        .dark .navbar-glass {
+            background: rgba(11, 26, 48, 0.92);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        /* MOBILE MENU */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            background: rgba(255, 252, 248, 0.98);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            transform: translateY(-100%);
+            transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+            max-height: 100vh;
+            overflow-y: auto;
+            border-radius: 0 0 28px 28px;
+            padding: 90px 24px 30px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+        }
+        .dark .mobile-menu {
+            background: rgba(11, 26, 48, 0.98);
+        }
+        .mobile-menu.open {
+            transform: translateY(0);
+        }
+        .mobile-menu a {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px 20px;
+            font-weight: 700;
+            font-size: 1.05rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            color: #1e1e2a;
+            transition: 0.2s;
+            border-radius: 14px;
+        }
+        .dark .mobile-menu a {
+            color: #e2e8f0;
+            border-color: rgba(255, 255, 255, 0.05);
+        }
+        .mobile-menu a:active {
+            background: rgba(212, 175, 55, 0.08);
+        }
+        .mobile-menu a i {
+            width: 28px;
+            color: #D4AF37;
+        }
+        #mobileOverlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            z-index: 40;
+            display: none;
+        }
+        #mobileOverlay.show {
+            display: block;
+        }
+
+        /* BOTTOM NAV */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 45;
+            background: rgba(255, 252, 248, 0.94);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-top: 1px solid rgba(212, 175, 55, 0.15);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 8px 10px;
+            padding-bottom: max(8px, env(safe-area-inset-bottom));
+            box-shadow: 0 -6px 30px rgba(0, 0, 0, 0.04);
+        }
+        .dark .bottom-nav {
+            background: rgba(11, 26, 48, 0.94);
+            border-top: 1px solid rgba(212, 175, 55, 0.08);
+        }
+        .bottom-nav a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 0.6rem;
+            font-weight: 700;
+            color: #94a3b8;
+            transition: 0.2s;
+            padding: 4px 8px;
+            border-radius: 12px;
+            min-width: 52px;
+            text-decoration: none;
+            gap: 2px;
+        }
+        .dark .bottom-nav a {
+            color: #64748b;
+        }
+        .bottom-nav a i {
+            font-size: 1.3rem;
+            transition: 0.2s;
+        }
+        .bottom-nav a.active {
+            color: #D4AF37;
+        }
+        .bottom-nav a.active i {
+            transform: scale(1.05);
+        }
+        .bottom-nav a span {
+            font-size: 0.55rem;
+            line-height: 1.2;
+        }
+
+        /* GLASS CARDS */
+        .glass-card {
+            background: rgba(255, 252, 248, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .dark .glass-card {
+            background: rgba(26, 45, 74, 0.5);
+            border-color: rgba(212, 175, 55, 0.08);
+        }
+        .glass-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.12);
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+
+        /* BUTTONS */
+        .btn-gold {
+            background: linear-gradient(135deg, #D4AF37, #B8960F);
+            color: #0B1A30;
+            font-weight: 800;
+            transition: all 0.3s;
+            box-shadow: 0 8px 24px rgba(212, 175, 55, 0.25);
+        }
+        .btn-gold:hover {
+            transform: scale(1.04);
+            box-shadow: 0 12px 32px rgba(212, 175, 55, 0.35);
+        }
+        .btn-outline-gold {
+            border: 2px solid #D4AF37;
+            color: #D4AF37;
+            font-weight: 700;
+            transition: all 0.3s;
+            background: transparent;
+        }
+        .btn-outline-gold:hover {
+            background: #D4AF37;
+            color: #0B1A30;
+            transform: scale(1.04);
+        }
+
+        /* HERO */
+        .hero-gradient {
+            background:
+                radial-gradient(ellipse at 80% 10%, rgba(212, 175, 55, 0.12), transparent 50%),
+                radial-gradient(ellipse at 20% 90%, rgba(13, 148, 136, 0.08), transparent 50%),
+                linear-gradient(145deg, #0B1A30 0%, #162b44 100%);
+            border-radius: 0 0 40px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-gradient::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4AF37' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+        .hero-glow-ring {
+            box-shadow: 0 0 80px rgba(212, 175, 55, 0.1), 0 0 160px rgba(13, 148, 136, 0.05);
+        }
+        .text-gold-gradient {
+            background: linear-gradient(135deg, #F3E5AB, #D4AF37, #B8960F);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* MARQUEE */
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+        .marquee-track {
+            display: flex;
+            gap: 24px;
+            flex-shrink: 0;
+            animation: marquee 28s linear infinite;
+        }
+        .marquee-wrapper:hover .marquee-track {
+            animation-play-state: paused;
+        }
+
+        /* BEFORE / AFTER */
+        .ba-slider {
+            position: relative;
+            overflow: hidden;
+            cursor: ew-resize;
+            border-radius: 20px;
+        }
+        .ba-slider img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .ba-after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            overflow: hidden;
+            border-radius: 20px 0 0 20px;
+        }
+        .ba-handle {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: #D4AF37;
+            left: 50%;
+            transform: translateX(-50%);
+            pointer-events: none;
+            z-index: 20;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+        }
+        .ba-handle::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 42px;
+            height: 42px;
+            background: #D4AF37;
+            border-radius: 50%;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+            border: 2px solid #fff;
+        }
+        .ba-handle::after {
+            content: '⟷';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #0B1A30;
+            font-weight: 900;
+            font-size: 16px;
+            z-index: 30;
+        }
+
+        /* FAQ */
+        .faq-toggle .fa-chevron-down {
+            transition: transform 0.3s;
+        }
+        .faq-toggle.open .fa-chevron-down {
+            transform: rotate(180deg);
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s ease;
+            padding: 0 4px;
+        }
+        .faq-answer.open {
+            max-height: 200px;
+            padding: 16px 4px 4px;
+        }
+
+        /* SCROLL REVEAL */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.23, 1, 0.32, 1), transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* PROGRESS BAR */
+        #progressBar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #D4AF37, #F3E5AB);
+            z-index: 60;
+            width: 0%;
+            transition: width 0.1s;
+        }
+
+        /* SCROLL TOP */
+        #scrollTop {
+            position: fixed;
+            bottom: 96px;
+            right: 20px;
+            z-index: 35;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #D4AF37, #B8960F);
+            color: #0B1A30;
+            border: none;
+            box-shadow: 0 8px 28px rgba(212, 175, 55, 0.35);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+            opacity: 0;
+            transform: translateY(20px);
+            pointer-events: none;
+        }
+        #scrollTop.visible {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+        #scrollTop:hover {
+            transform: scale(1.08);
+        }
+
+        /* CERT BADGE */
+        .cert-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(212, 175, 55, 0.08);
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #D4AF37;
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+        .dark .cert-badge {
+            background: rgba(212, 175, 55, 0.12);
+        }
+
+        /* MODAL */
+        .modal-overlay {
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            .hero-gradient {
+                border-radius: 0 0 28px 28px;
+            }
+            .glass-card {
+                margin: 0 4px;
+            }
+            .ba-handle::before {
+                width: 34px;
+                height: 34px;
+            }
+            .ba-handle::after {
+                font-size: 13px;
+            }
+            #scrollTop {
+                bottom: 84px;
+                right: 14px;
+                width: 42px;
+                height: 42px;
+                font-size: 1rem;
+            }
+        }
+        @media (min-width: 769px) {
+            body {
+                padding-bottom: 0;
+            }
+            .bottom-nav {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== PROGRESS BAR ===== -->
+    <div id="progressBar"></div>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar-glass fixed top-0 left-0 right-0 z-40 transition-all duration-300 h-16 flex items-center px-4">
+        <div class="max-w-7xl mx-auto w-full flex justify-between items-center">
+            <a href="#" onclick="navigate('home')" class="flex items-center gap-2 font-extrabold text-xl">
+                <i class="fas fa-stethoscope text-gold-gradient text-2xl"></i>
+                <span class="hidden sm:inline text-gold-gradient">د. أحمد المحمد</span>
+                <span class="sm:hidden text-gold-gradient">د.أحمد</span>
+            </a>
+
+            <!-- DESKTOP LINKS -->
+            <div class="hidden md:flex items-center gap-5 text-sm font-bold">
+                <a href="#home" onclick="navigate('home')" class="nav-link text-slate-700 dark:text-slate-200 hover:text-gold transition">الرئيسية</a>
+                <a href="#services" onclick="navigate('services')" class="nav-link text-slate-700 dark:text-slate-200 hover:text-gold transition">الخدمات</a>
+                <a href="#gallery" onclick="navigate('gallery')" class="nav-link text-slate-700 dark:text-slate-200 hover:text-gold transition">قبل وبعد</a>
+                <a href="#library" onclick="navigate('library')" class="nav-link text-slate-700 dark:text-slate-200 hover:text-gold transition">المكتبة</a>
+                <a href="#blog" onclick="navigate('blog')" class="nav-link text-slate-700 dark:text-slate-200 hover:text-gold transition">المدونة</a>
+                <a href="#faq" onclick="navigate('faq')" class="nav-link text-slate-700 dark:text-slate-200 hover:text-gold transition">الأسئلة</a>
+                <a href="#reviews" onclick="navigate('reviews')" class="nav-link text-slate-700 dark:text-slate-200 hover:text-gold transition">التقييمات</a>
+                <a href="#contact" onclick="navigate('contact')" class="nav-link text-slate-700 dark:text-slate-200 hover:text-gold transition">تواصل</a>
+            </div>
+
+            <div class="flex items-center gap-2">
+                <button onclick="toggleDark()" class="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition" aria-label="الوضع الليلي">
+                    <i class="fas fa-moon dark:hidden text-slate-700"></i>
+                    <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                </button>
+                <button onclick="toggleMobile()" class="p-2 rounded-full md:hidden hover:bg-black/5 dark:hover:bg-white/5 transition" aria-label="القائمة">
+                    <i class="fas fa-bars text-xl text-slate-700 dark:text-slate-200"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== MOBILE MENU ===== -->
+    <div id="mobileMenu" class="mobile-menu">
+        <div class="flex flex-col gap-1">
+            <a href="#home" onclick="navigate('home'); closeMobile();"><i class="fas fa-home"></i> الرئيسية</a>
+            <a href="#services" onclick="navigate('services'); closeMobile();"><i class="fas fa-sparkles"></i> الخدمات</a>
+            <a href="#gallery" onclick="navigate('gallery'); closeMobile();"><i class="fas fa-images"></i> قبل وبعد</a>
+            <a href="#library" onclick="navigate('library'); closeMobile();"><i class="fas fa-photo-video"></i> المكتبة</a>
+            <a href="#blog" onclick="navigate('blog'); closeMobile();"><i class="fas fa-newspaper"></i> المدونة</a>
+            <a href="#faq" onclick="navigate('faq'); closeMobile();"><i class="fas fa-question-circle"></i> الأسئلة</a>
+            <a href="#reviews" onclick="navigate('reviews'); closeMobile();"><i class="fas fa-star"></i> التقييمات</a>
+            <a href="#contact" onclick="navigate('contact'); closeMobile();"><i class="fas fa-share-alt"></i> التواصل</a>
+            <button onclick="openBooking(); closeMobile();" class="mt-4 w-full btn-gold py-4 rounded-2xl flex items-center justify-center gap-2 text-base shadow-lg">
+                <i class="fab fa-whatsapp"></i> احجز استشارة
+            </button>
+        </div>
+    </div>
+    <div id="mobileOverlay" onclick="closeMobile()"></div>
+
+    <!-- ===== BOTTOM NAV (mobile) ===== -->
+    <nav class="bottom-nav md:hidden">
+        <a href="#home" onclick="navigate('home')" class="active"><i class="fas fa-home"></i><span>الرئيسية</span></a>
+        <a href="#services" onclick="navigate('services')"><i class="fas fa-sparkles"></i><span>الخدمات</span></a>
+        <a href="#gallery" onclick="navigate('gallery')"><i class="fas fa-images"></i><span>قبل وبعد</span></a>
+        <a href="#contact" onclick="navigate('contact')"><i class="fas fa-phone"></i><span>تواصل</span></a>
+        <a href="#" onclick="openBooking(); return false;"><i class="fas fa-calendar-check text-gold"></i><span>حجز</span></a>
+    </nav>
+
+    <!-- ===== SCROLL TOP ===== -->
+    <button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="العودة للأعلى">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- ===== MAIN ===== -->
+    <main class="pt-16">
+
+        <!-- ===== HOME ===== -->
+        <section id="home" class="page-section active">
+            <div class="hero-gradient px-4 pt-10 pb-16 md:pt-14 md:pb-24">
+                <div class="max-w-7xl mx-auto grid lg:grid-cols-[1.05fr_0.95fr] gap-12 items-center relative z-10">
+                    <div class="space-y-6 text-center lg:text-right">
+                        <div class="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm border border-white/10 rounded-full px-5 py-2 text-sm font-bold text-gold-light">
+                            <i class="fas fa-certificate"></i> البورد السعودي · العربي
+                        </div>
+                        <h1 class="hero-title text-4xl md:text-5xl lg:text-6xl font-black leading-tight text-white">
+                            الدكتور <span class="text-gold-gradient">أحمد المحمد</span>
+                        </h1>
+                        <p class="text-xl font-semibold text-gold-light">استشاري الجلدية والتجميل</p>
+                        <p class="text-slate-300 max-w-xl mx-auto lg:mx-0 leading-relaxed text-lg">
+                            رعاية جلدية متكاملة تجمع بين الخبرة الأكاديمية والتقنيات الحديثة، لتحقيق نتائج طبيعية وآمنة.
+                        </p>
+                        <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
+                            <button onclick="openBooking()" class="btn-gold px-8 py-4 rounded-full text-base flex items-center gap-2 shadow-xl">
+                                <i class="fab fa-whatsapp"></i> احجز استشارة
+                            </button>
+                            <button onclick="navigate('services')" class="btn-outline-gold px-8 py-4 rounded-full text-base">
+                                استكشف خدماتنا
+                            </button>
+                        </div>
+                        <div class="grid grid-cols-3 gap-3 pt-2 max-w-md mx-auto lg:mx-0">
+                            <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-3 text-center">
+                                <div class="text-2xl font-black text-gold-light">11+</div>
+                                <div class="text-xs text-slate-300">سنوات خبرة</div>
+                            </div>
+                            <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-3 text-center">
+                                <div class="text-2xl font-black text-gold-light">5K+</div>
+                                <div class="text-xs text-slate-300">مرضى</div>
+                            </div>
+                            <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-3 text-center">
+                                <div class="text-2xl font-black text-gold-light">15K+</div>
+                                <div class="text-xs text-slate-300">إجراء</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-center">
+                        <div class="hero-glow-ring relative w-full max-w-sm rounded-[30px] p-3 bg-white/10 backdrop-blur-xl border border-white/15 shadow-2xl">
+                            <div class="rounded-[22px] overflow-hidden border border-white/10">
+                                <img src="Ahmed.jpeg" alt="د. أحمد المحمد" class="w-full h-auto object-cover" loading="lazy" />
+                            </div>
+                            <div class="absolute -top-3 -right-3 bg-gradient-to-br from-gold to-gold-dark text-navy px-4 py-2 rounded-full text-xs font-black shadow-lg">خبير معتمد</div>
+                            <div class="absolute bottom-4 left-4 bg-navy/90 backdrop-blur-sm text-white px-4 py-3 rounded-2xl text-xs border border-white/10">
+                                <div class="font-black text-gold-light">بورد سعودي وعربي</div>
+                                <div class="text-slate-300">الأمراض الجلدية والتجميل</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MARQUEE REVIEWS -->
+            <div class="py-4 bg-white/50 dark:bg-navy/50 border-y border-gold/10 overflow-hidden marquee-wrapper">
+                <div class="marquee-track">
+                    <div class="glass-card px-5 py-3 rounded-2xl flex items-center gap-4 whitespace-nowrap shadow-sm">
+                        <span class="text-yellow-400 text-sm">★★★★★</span>
+                        <span class="text-sm font-medium">"أفضل دكتور جلدية، نتائج طبيعية ومبهرة"</span>
+                        <span class="text-xs text-slate-400">— سارة</span>
+                    </div>
+                    <div class="glass-card px-5 py-3 rounded-2xl flex items-center gap-4 whitespace-nowrap shadow-sm">
+                        <span class="text-yellow-400 text-sm">★★★★★</span>
+                        <span class="text-sm font-medium">"المورفيوس غير بشرتي للأسوأ للأفضل!"</span>
+                        <span class="text-xs text-slate-400">— محمد</span>
+                    </div>
+                    <div class="glass-card px-5 py-3 rounded-2xl flex items-center gap-4 whitespace-nowrap shadow-sm">
+                        <span class="text-yellow-400 text-sm">★★★★★</span>
+                        <span class="text-sm font-medium">"علاج الشعر معه كان نقلة نوعية بحياتي"</span>
+                        <span class="text-xs text-slate-400">— فاطمة</span>
+                    </div>
+                    <div class="glass-card px-5 py-3 rounded-2xl flex items-center gap-4 whitespace-nowrap shadow-sm">
+                        <span class="text-yellow-400 text-sm">★★★★★</span>
+                        <span class="text-sm font-medium">"يده خفيفة ونتائج البوتكس ممتازة"</span>
+                        <span class="text-xs text-slate-400">— نورة</span>
+                    </div>
+                    <div class="glass-card px-5 py-3 rounded-2xl flex items-center gap-4 whitespace-nowrap shadow-sm">
+                        <span class="text-yellow-400 text-sm">★★★★★</span>
+                        <span class="text-sm font-medium">"استشاري متميز في كل شيء"</span>
+                        <span class="text-xs text-slate-400">— خالد</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ABOUT SNIPPET -->
+            <div class="max-w-7xl mx-auto px-4 py-10">
+                <div class="glass-card rounded-[32px] p-8 md:p-10 shadow-premium">
+                    <div class="grid lg:grid-cols-[1.1fr_0.9fr] gap-8 items-start">
+                        <div class="space-y-5">
+                            <div class="flex items-center gap-3">
+                                <i class="fas fa-user-md text-gold text-xl"></i>
+                                <span class="text-sm font-bold text-gold">نبذة</span>
+                            </div>
+                            <h2 class="text-3xl font-extrabold text-navy dark:text-white">خبرة طبية تجمع بين العلم والإبداع</h2>
+                            <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+                                استشاري الجلدية والتجميل، حاصل على البورد السعودي والعربي، يقدم خدمات تشخيصية وعلاجية متقدمة في الأمراض الجلدية، الحقن التجميلي، الليزر، وعلاج مشاكل الشعر، مع خطة علاجية مخصصة لكل حالة.
+                            </p>
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div class="bg-white/60 dark:bg-navy/60 p-4 rounded-2xl border border-gold/10">
+                                    <h4 class="font-black text-gold mb-1">التخصصات</h4>
+                                    <p class="text-sm text-slate-600 dark:text-slate-300">جلدية، تجميل غير جراحي، تجديد البشرة، علاج الشعر</p>
+                                </div>
+                                <div class="bg-white/60 dark:bg-navy/60 p-4 rounded-2xl border border-gold/10">
+                                    <h4 class="font-black text-gold mb-1">النهج</h4>
+                                    <p class="text-sm text-slate-600 dark:text-slate-300">تشخيص دقيق، بروتوكولات حديثة، نتائج طبيعية</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gold/5 p-6 rounded-3xl border border-gold/10">
+                            <h3 class="font-black text-xl text-gold mb-4">أبرز الخدمات</h3>
+                            <ul class="space-y-3 text-sm text-slate-700 dark:text-slate-300">
+                                <li><i class="fas fa-check-circle text-gold ml-2"></i> علاج الأكزيما، الصدفية، الثعلبة، حب الشباب</li>
+                                <li><i class="fas fa-check-circle text-gold ml-2"></i> بوتوكس، فيلر، محفزات الكولاجين</li>
+                                <li><i class="fas fa-check-circle text-gold ml-2"></i> ليزر، شد غير جراحي، نضارة البشرة</li>
+                                <li><i class="fas fa-check-circle text-gold ml-2"></i> بلازما الشعر وعلاج التساقط</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ABOUT ===== -->
+        <section id="about" class="page-section py-16 px-4 max-w-7xl mx-auto">
+            <div class="glass-card rounded-[32px] p-8 md:p-12 shadow-premium">
+                <div class="flex flex-col lg:flex-row gap-10 items-start">
+                    <div class="lg:w-2/3 space-y-6">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-user-md text-gold text-xl"></i>
+                            <span class="text-sm font-bold text-gold">السيرة الذاتية</span>
+                        </div>
+                        <h2 class="text-4xl font-extrabold text-navy dark:text-white">د. أحمد المحمد</h2>
+                        <p class="text-lg leading-relaxed text-slate-600 dark:text-slate-300">
+                            استشاري الأمراض الجلدية والتجميل، بخبرة تمتد لأكثر من 11 عاماً في تشخيص وعلاج الحالات الجلدية المعقدة، والإجراءات التجميلية غير الجراحية. يجمع بين الدقة الأكاديمية والرؤية الفنية لتحقيق أفضل النتائج.
+                        </p>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="bg-white/60 dark:bg-navy/60 p-5 rounded-2xl border border-gold/10">
+                                <h4 class="font-black text-gold mb-2">المؤهلات</h4>
+                                <ul class="space-y-1 text-sm text-slate-600 dark:text-slate-300">
+                                    <li>• بكالوريوس الطب والجراحة – 2014</li>
+                                    <li>• البورد السعودي للأمراض الجلدية – 2020</li>
+                                    <li>• البورد العربي للأمراض الجلدية – 2020</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white/60 dark:bg-navy/60 p-5 rounded-2xl border border-gold/10">
+                                <h4 class="font-black text-gold mb-2">الترخيص</h4>
+                                <p class="text-sm text-slate-600 dark:text-slate-300">استشاري أمراض جلدية، مصنف من الهيئة السعودية للتخصصات الصحية.</p>
+                            </div>
+                        </div>
+                        <div class="bg-white/60 dark:bg-navy/60 p-5 rounded-2xl border border-gold/10">
+                            <h4 class="font-black text-gold mb-2">الخبرات</h4>
+                            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                                استشاري أمراض جلدية وتجميل، متخصص في الحقن التجميلي (بوتوكس، فيلر، محفزات الكولاجين)، البلازما (PRP)، الليزر، وطب الجلدية التجديدي.
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="cert-badge"><i class="fas fa-award"></i> البورد السعودي</span>
+                            <span class="cert-badge"><i class="fas fa-award"></i> البورد العربي</span>
+                            <span class="cert-badge"><i class="fas fa-medal"></i> جائزة التميز 2022</span>
+                            <span class="cert-badge"><i class="fas fa-certificate"></i> زمالة التجميل</span>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/3 w-full grid grid-cols-2 gap-4">
+                        <div class="bg-gold/5 p-5 rounded-2xl border border-gold/10 text-center">
+                            <div class="text-4xl font-black text-gold">11+</div>
+                            <div class="text-xs text-slate-500">سنوات خبرة</div>
+                        </div>
+                        <div class="bg-gold/5 p-5 rounded-2xl border border-gold/10 text-center">
+                            <div class="text-2xl font-black text-gold">+5,000</div>
+                            <div class="text-xs text-slate-500">مريض</div>
+                        </div>
+                        <div class="bg-gold/5 p-5 rounded-2xl border border-gold/10 text-center">
+                            <div class="text-2xl font-black text-gold">+15,000</div>
+                            <div class="text-xs text-slate-500">إجراء</div>
+                        </div>
+                        <div class="bg-gold/5 p-5 rounded-2xl border border-gold/10 text-center">
+                            <div class="text-2xl font-black text-gold">بورد</div>
+                            <div class="text-xs text-slate-500">سعودي وعربي</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SERVICES ===== -->
+        <section id="services" class="page-section py-16 px-4 max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center gap-2 bg-gold/10 text-gold px-4 py-2 rounded-full text-sm font-bold mb-4"> <i class="fas fa-sparkles"></i> خدمات شاملة </div>
+                <h2 class="text-4xl font-extrabold text-navy dark:text-white">الخدمات</h2>
+                <p class="text-slate-600 dark:text-slate-300 max-w-2xl mx-auto mt-2">نقدم رعاية متكاملة وفق أحدث المعايير الطبية، مع خطط علاجية مخصصة لكل حالة.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass-card p-6 rounded-3xl hover:border-gold/40">
+                    <div class="text-gold text-3xl mb-3"><i class="fas fa-stethoscope"></i></div>
+                    <h3 class="text-xl font-black text-navy dark:text-white mb-3">علاج الأمراض الجلدية</h3>
+                    <ul class="space-y-1 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                        <li>• تشخيص وعلاج الأكزيما، الصدفية، الثعلبة</li>
+                        <li>• علاج حب الشباب وآثاره</li>
+                        <li>• علاج الالتهابات والفطريات</li>
+                        <li>• اضطرابات الأظافر وفروة الرأس</li>
+                    </ul>
+                </div>
+                <div class="glass-card p-6 rounded-3xl hover:border-gold/40">
+                    <div class="text-gold text-3xl mb-3"><i class="fas fa-smile"></i></div>
+                    <h3 class="text-xl font-black text-navy dark:text-white mb-3">التجميل غير الجراحي</h3>
+                    <ul class="space-y-1 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                        <li>• بوتوكس للتجاعيد والخطوط التعبيرية</li>
+                        <li>• فيلر لتناسق ملامح الوجه</li>
+                        <li>• محفزات الكولاجين وشد البشرة</li>
+                        <li>• بلازما (PRP) للبشرة والشعر</li>
+                    </ul>
+                </div>
+                <div class="glass-card p-6 rounded-3xl hover:border-gold/40">
+                    <div class="text-gold text-3xl mb-3"><i class="fas fa-sun"></i></div>
+                    <h3 class="text-xl font-black text-navy dark:text-white mb-3">الليزر وتجديد البشرة</h3>
+                    <ul class="space-y-1 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                        <li>• فراكشنال ليزر للندبات وآثار الحبوب</li>
+                        <li>• نضارة البشرة وتحفيز الكولاجين</li>
+                        <li>• شد غير جراحي وتقليل المسام</li>
+                        <li>• علاج التصبغات وتوحيد اللون</li>
+                    </ul>
+                </div>
+                <div class="glass-card p-6 rounded-3xl hover:border-gold/40">
+                    <div class="text-gold text-3xl mb-3"><i class="fas fa-cut"></i></div>
+                    <h3 class="text-xl font-black text-navy dark:text-white mb-3">علاج مشاكل الشعر</h3>
+                    <ul class="space-y-1 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                        <li>• تشخيص أسباب التساقط</li>
+                        <li>• علاج الثعلبة وأنواعها</li>
+                        <li>• حقن البلازما للشعر</li>
+                        <li>• برامج تحفيز النمو</li>
+                    </ul>
+                </div>
+                <div class="glass-card p-6 rounded-3xl hover:border-gold/40 md:col-span-2">
+                    <div class="text-gold text-3xl mb-3"><i class="fas fa-spa"></i></div>
+                    <h3 class="text-xl font-black text-navy dark:text-white mb-3">العناية بالبشرة</h3>
+                    <ul class="space-y-1 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                        <li>• علاج الكلف والتصبغات والهالات</li>
+                        <li>• إزالة الزوائد والثآليل</li>
+                        <li>• خطط عناية مخصصة حسب نوع البشرة</li>
+                    </ul>
+                    <div class="mt-4 bg-gold/5 p-4 rounded-2xl border border-gold/10 text-sm text-slate-700 dark:text-slate-300">
+                        <strong>ملاحظة:</strong> جميع الخدمات تقدم وفق أحدث البروتوكولات الطبية، مع متابعة دورية لضمان أفضل النتائج.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== GALLERY ===== -->
+        <section id="gallery" class="page-section py-16 px-4 max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center gap-2 bg-gold/10 text-gold px-4 py-2 rounded-full text-sm font-bold mb-4"> <i class="fas fa-images"></i> نتائج حقيقية </div>
+                <h2 class="text-4xl font-extrabold text-navy dark:text-white">قبل وبعد</h2>
+                <p class="text-slate-600 dark:text-slate-300 max-w-2xl mx-auto mt-2">شاهد الفرق بنفسك من خلال صور حالات حقيقية.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="glass-card rounded-3xl overflow-hidden">
+                    <div class="relative h-80 ba-slider">
+                        <img src="Botox Forehead – Before.png" class="absolute inset-0 w-full h-full object-cover" alt="قبل البوتكس" loading="lazy" />
+                        <div class="ba-after"><img src="Botox Forehead –After.png" class="absolute inset-0 w-full h-full object-cover" alt="بعد البوتكس" loading="lazy" /></div>
+                        <div class="ba-handle"></div>
+                    </div>
+                    <div class="p-5 text-center">
+                        <h4 class="font-bold text-navy dark:text-white">تنعيم تجاعيد الجبهة</h4>
+                        <p class="text-sm text-slate-500">نتيجة جلسة بوتوكس واحدة</p>
+                    </div>
+                </div>
+                <div class="glass-card rounded-3xl overflow-hidden">
+                    <div class="relative h-80 ba-slider">
+                        <img src="Lip Filler_ Before.png" class="absolute inset-0 w-full h-full object-cover" alt="قبل الفيلر" loading="lazy" />
+                        <div class="ba-after"><img src="Lip Filler –After.png" class="absolute inset-0 w-full h-full object-cover" alt="بعد الفيلر" loading="lazy" /></div>
+                        <div class="ba-handle"></div>
+                    </div>
+                    <div class="p-5 text-center">
+                        <h4 class="font-bold text-navy dark:text-white">تحديد وامتلاء الشفايف</h4>
+                        <p class="text-sm text-slate-500">نتيجة فيلر حمض الهيالورونيك</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== LIBRARY ===== -->
+        <section id="library" class="page-section py-16 px-4 max-w-7xl mx-auto">
+            <div class="glass-card rounded-[32px] p-8 md:p-12 shadow-premium">
+                <div class="text-center mb-8">
+                    <div class="inline-flex items-center gap-2 bg-pink-50 dark:bg-pink-900/20 text-pink-600 dark:text-pink-300 px-4 py-2 rounded-full text-sm font-bold mb-4">
+                        <i class="fab fa-instagram"></i> مكتبة الوسائط
+                    </div>
+                    <h2 class="text-4xl font-extrabold text-navy dark:text-white">فيديوهات وصور</h2>
+                    <p class="text-slate-600 dark:text-slate-300 max-w-2xl mx-auto mt-2">تابع أحدث المحتوى الطبي والتجميلي عبر منصات التواصل.</p>
+                </div>
+                <div class="grid lg:grid-cols-[1.2fr_0.8fr] gap-6 items-start">
+                    <div class="rounded-3xl overflow-hidden bg-white/80 dark:bg-navy/70 p-3 shadow-md">
+                        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/dr.ahmedalmohammed/" data-instgrm-version="14" style="background:#fff; border:0; border-radius:16px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin:1px; max-width:540px; min-width:326px; padding:0; width:100%;">
+                            <a href="https://www.instagram.com/dr.ahmedalmohammed/" target="_blank" rel="noopener noreferrer"></a>
+                        </blockquote>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-white/80 dark:bg-navy/70 p-6 rounded-3xl shadow-md">
+                            <h4 class="font-black text-lg mb-3">روابط التواصل</h4>
+                            <div class="flex flex-wrap gap-3">
+                                <a href="https://www.instagram.com/dr.ahmedalmohammed/" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-pink-500 to-purple-600 text-white font-bold px-5 py-2 rounded-full text-sm shadow hover:scale-105 transition">إنستغرام</a>
+                                <a href="https://vt.tiktok.com/ZSX3CcQfR/" target="_blank" rel="noopener noreferrer" class="bg-slate-900 text-white font-bold px-5 py-2 rounded-full text-sm shadow hover:scale-105 transition">تيك توك</a>
+                                <a href="https://snapchat.com/t/o5Ln9Hzw" target="_blank" rel="noopener noreferrer" class="bg-yellow-400 text-slate-900 font-bold px-5 py-2 rounded-full text-sm shadow hover:scale-105 transition">سناب شات</a>
+                            </div>
+                        </div>
+                        <div class="bg-white/80 dark:bg-navy/70 p-6 rounded-3xl shadow-md">
+                            <h4 class="font-black text-lg mb-2">ملاحظة</h4>
+                            <p class="text-sm text-slate-600 dark:text-slate-300">إذا لم تظهر المعاينة، يمكنك زيارة الروابط أعلاه مباشرة.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== BLOG ===== -->
+        <section id="blog" class="page-section py-16 px-4 max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center gap-2 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-300 px-4 py-2 rounded-full text-sm font-bold mb-4"> <i class="fas fa-newspaper"></i> مدونة طبية </div>
+                <h2 class="text-4xl font-extrabold text-navy dark:text-white">آخر المقالات</h2>
+                <p class="text-slate-600 dark:text-slate-300 max-w-2xl mx-auto mt-2">نصائح وإرشادات طبية من د. أحمد.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="glass-card p-6 rounded-3xl">
+                    <div class="text-gold text-3xl mb-3"><i class="fas fa-syringe"></i></div>
+                    <h4 class="font-bold text-lg text-navy dark:text-white">فوائد البوتوكس العلاجية</h4>
+                    <p class="text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">يستخدم البوتوكس في علاج الصداع النصفي، التعرق المفرط، والتشنجات العضلية.</p>
+                    <a href="#" class="inline-block mt-3 text-gold font-bold text-sm">اقرأ المزيد <i class="fas fa-arrow-left mr-1"></i></a>
+                </div>
+                <div class="glass-card p-6 rounded-3xl">
+                    <div class="text-gold text-3xl mb-3"><i class="fas fa-hand-sparkles"></i></div>
+                    <h4 class="font-bold text-lg text-navy dark:text-white">العناية بالبشرة بعد الليزر</h4>
+                    <p class="text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">نصائح للحفاظ على النتائج وتجنب التصبغات مع واقي الشمس والمرطبات.</p>
+                    <a href="#" class="inline-block mt-3 text-gold font-bold text-sm">اقرأ المزيد <i class="fas fa-arrow-left mr-1"></i></a>
+                </div>
+                <div class="glass-card p-6 rounded-3xl">
+                    <div class="text-gold text-3xl mb-3"><i class="fas fa-seedling"></i></div>
+                    <h4 class="font-bold text-lg text-navy dark:text-white">علاج التساقط بالبلازما</h4>
+                    <p class="text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">حقن PRP تحفز نمو الشعر وتقوي البصيلات، وهي آمنة وفعالة.</p>
+                    <a href="#" class="inline-block mt-3 text-gold font-bold text-sm">اقرأ المزيد <i class="fas fa-arrow-left mr-1"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FAQ ===== -->
+        <section id="faq" class="page-section py-16 px-4 max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center gap-2 bg-yellow-50 dark:bg-yellow-900/20 text-yellow-600 dark:text-yellow-300 px-4 py-2 rounded-full text-sm font-bold mb-4"> <i class="fas fa-question-circle"></i> الأسئلة الشائعة </div>
+                <h2 class="text-4xl font-extrabold text-navy dark:text-white">إجابات على استفساراتكم</h2>
+            </div>
+            <div class="space-y-4">
+                <div class="glass-card p-6 rounded-2xl">
+                    <button onclick="toggleFaq(this)" class="faq-toggle flex justify-between w-full font-bold text-lg text-navy dark:text-white text-right">
+                        <span>كم تستمر نتائج البوتوكس؟</span>
+                        <i class="fas fa-chevron-down text-gold"></i>
+                    </button>
+                    <div class="faq-answer text-slate-600 dark:text-slate-300 leading-relaxed">تتراوح بين 4 إلى 6 أشهر، وتختلف حسب العمر ونوع الجلد والجرعة.</div>
+                </div>
+                <div class="glass-card p-6 rounded-2xl">
+                    <button onclick="toggleFaq(this)" class="faq-toggle flex justify-between w-full font-bold text-lg text-navy dark:text-white text-right">
+                        <span>هل إجراء المورفيوس مؤلم؟</span>
+                        <i class="fas fa-chevron-down text-gold"></i>
+                    </button>
+                    <div class="faq-answer text-slate-600 dark:text-slate-300 leading-relaxed">يتم تخدير موضعي، ومعظم المرضى يصفون الإحساس بأنه خفيف جداً.</div>
+                </div>
+                <div class="glass-card p-6 rounded-2xl">
+                    <button onclick="toggleFaq(this)" class="faq-toggle flex justify-between w-full font-bold text-lg text-navy dark:text-white text-right">
+                        <span>متى يمكن العودة للعمل بعد الحقن؟</span>
+                        <i class="fas fa-chevron-down text-gold"></i>
+                    </button>
+                    <div class="faq-answer text-slate-600 dark:text-slate-300 leading-relaxed">يمكن العودة فوراً، مع احمرار بسيط يزول خلال ساعات.</div>
+                </div>
+                <div class="glass-card p-6 rounded-2xl">
+                    <button onclick="toggleFaq(this)" class="faq-toggle flex justify-between w-full font-bold text-lg text-navy dark:text-white text-right">
+                        <span>كيف أستعد لعلاج تساقط الشعر؟</span>
+                        <i class="fas fa-chevron-down text-gold"></i>
+                    </button>
+                    <div class="faq-answer text-slate-600 dark:text-slate-300 leading-relaxed">غسل الشعر جيداً وتجنب المنتجات الزيتية، وإخبار الطبيب بأي أدوية.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== REVIEWS ===== -->
+        <section id="reviews" class="page-section py-16 px-4 max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center gap-2 bg-rose-50 dark:bg-rose-900/20 text-rose-600 dark:text-rose-300 px-4 py-2 rounded-full text-sm font-bold mb-4"> <i class="fas fa-star"></i> آراء المرضى </div>
+                <h2 class="text-4xl font-extrabold text-navy dark:text-white">ماذا يقولون عنا؟</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6 mb-8">
+                <div class="glass-card p-8 rounded-3xl text-center">
+                    <div class="text-yellow-400 text-2xl mb-3">★★★★★</div>
+                    <p class="leading-relaxed">"أفضل دكتور جلدية، نتائج البوتكس طبيعية ويده خفيفة جداً."</p>
+                    <span class="font-bold text-gold mt-4 block">سارة القحطاني</span>
+                </div>
+                <div class="glass-card p-8 rounded-3xl text-center">
+                    <div class="text-yellow-400 text-2xl mb-3">★★★★★</div>
+                    <p class="leading-relaxed">"المورفيوس مع د. أحمد فرق كبير في بشرتي، أنصح به بشدة."</p>
+                    <span class="font-bold text-gold mt-4 block">محمد القحطاني</span>
+                </div>
+                <div class="glass-card p-8 rounded-3xl text-center">
+                    <div class="text-yellow-400 text-2xl mb-3">★★★★★</div>
+                    <p class="leading-relaxed">"علاج تساقط الشعر غير حياتي، بروتوكول علمي ومتابعة ممتازة."</p>
+                    <span class="font-bold text-gold mt-4 block">فاطمة المطيري</span>
+                </div>
+            </div>
+            <div class="glass-card p-8 rounded-3xl text-center">
+                <h4 class="text-xl font-extrabold mb-4">شاركنا رأيك</h4>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <a href="#" class="bg-gold text-navy font-bold px-6 py-3 rounded-full shadow hover:scale-105 transition">تقييم Google</a>
+                    <a href="#" class="bg-gradient-to-r from-pink-500 to-purple-600 text-white font-bold px-6 py-3 rounded-full shadow hover:scale-105 transition">تقييم Instagram</a>
+                    <a href="#" class="bg-slate-900 text-white font-bold px-6 py-3 rounded-full shadow hover:scale-105 transition">تقييم TikTok</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CONTACT ===== -->
+        <section id="contact" class="page-section py-16 px-4 max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center gap-2 bg-green-50 dark:bg-green-900/20 text-green-600 dark:text-green-300 px-4 py-2 rounded-full text-sm font-bold mb-4"> <i class="fas fa-share-alt"></i> تواصل معنا </div>
+                <h2 class="text-4xl font-extrabold text-navy dark:text-white">تواصل مع الدكتور</h2>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-8">
+                <div class="space-y-6">
+                    <div class="glass-card p-8 rounded-3xl">
+                        <h4 class="text-2xl font-bold mb-6">روابط سريعة</h4>
+                        <div class="flex flex-wrap gap-4 justify-center">
+                            <a href="https://www.instagram.com/reel/Dax712qIQte/?igsh=bm4yYjk3MHd3ZTgy" target="_blank" rel="noopener" class="bg-gradient-to-r from-pink-500 to-purple-600 text-white font-bold px-6 py-3 rounded-full text-sm shadow hover:scale-105 transition flex items-center gap-2"><i class="fab fa-instagram"></i> انستغرام</a>
+                            <a href="https://vt.tiktok.com/ZSX3CcQfR/" target="_blank" rel="noopener" class="bg-slate-900 text-white font-bold px-6 py-3 rounded-full text-sm shadow hover:scale-105 transition flex items-center gap-2"><i class="fab fa-tiktok"></i> تيك توك</a>
+                            <a href="https://snapchat.com/t/o5Ln9Hzw" target="_blank" rel="noopener" class="bg-yellow-400 text-slate-900 font-bold px-6 py-3 rounded-full text-sm shadow hover:scale-105 transition flex items-center gap-2"><i class="fab fa-snapchat"></i> سناب شات</a>
+                        </div>
+                        <hr class="my-6 border-gold/10" />
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+                            <div><i class="fas fa-map-marker-alt text-2xl text-gold mb-2"></i><h5 class="font-bold">الموقع</h5><p class="text-sm text-slate-500">الرياض، حي الورود</p></div>
+                            <div><i class="fas fa-phone text-2xl text-gold mb-2"></i><h5 class="font-bold">الهاتف</h5><p class="text-sm text-slate-500">+966 50 710 4563</p></div>
+                            <div><i class="fas fa-clock text-2xl text-gold mb-2"></i><h5 class="font-bold">الدوام</h5><p class="text-sm text-slate-500">السبت - الخميس 4م - 10م</p></div>
+                        </div>
+                    </div>
+                    <div class="glass-card p-8 rounded-3xl">
+                        <h4 class="text-2xl font-bold mb-4">الشهادات</h4>
+                        <div class="flex flex-wrap gap-3 justify-center">
+                            <span class="cert-badge"><i class="fas fa-award"></i> البورد السعودي 2020</span>
+                            <span class="cert-badge"><i class="fas fa-award"></i> البورد العربي 2020</span>
+                            <span class="cert-badge"><i class="fas fa-medal"></i> جائزة التميز 2022</span>
+                            <span class="cert-badge"><i class="fas fa-certificate"></i> زمالة التجميل</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <div class="glass-card p-6 rounded-3xl overflow-hidden">
+                        <h4 class="text-xl font-bold mb-4 text-center">موقع العيادة</h4>
+                        <div class="rounded-2xl overflow-hidden h-56">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.462!2d46.6753!3d24.7135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f0389d9e4f7b7%3A0x8e5c6f7d8a9b0c1d!2sRiyadh!5e0!3m2!1sar!2ssa!4v1712345678901" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                    <div class="glass-card p-6 rounded-3xl">
+                        <h4 class="text-xl font-bold mb-4 text-center">احجز استشارة</h4>
+                        <form onsubmit="handleBooking(event)" class="space-y-4">
+                            <input type="text" id="bName" required class="w-full p-3 rounded-xl border border-gold/20 bg-white/50 dark:bg-navy/50 dark:border-gold/10" placeholder="الاسم الكامل" />
+                            <input type="tel" id="bPhone" required class="w-full p-3 rounded-xl border border-gold/20 bg-white/50 dark:bg-navy/50 dark:border-gold/10" placeholder="رقم الجوال (05xxxxxxxx)" />
+                            <select id="bService" class="w-full p-3 rounded-xl border border-gold/20 bg-white/50 dark:bg-navy/50 dark:border-gold/10">
+                                <option>بوتوكس / فيلر</option>
+                                <option>مورفيوس</option>
+                                <option>علاج تساقط الشعر</option>
+                                <option>استشارة جلدية</option>
+                            </select>
+                            <button type="submit" class="w-full btn-gold py-3 rounded-xl flex items-center justify-center gap-2 text-base"><i class="fab fa-whatsapp"></i> إرسال عبر الواتساب</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== BOOKING MODAL ===== -->
+    <div id="bookingModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 modal-overlay" onclick="if(event.target===this) closeBooking()">
+        <div class="glass-card p-8 rounded-3xl max-w-md w-full relative shadow-2xl border-gold/30">
+            <button onclick="closeBooking()" class="absolute top-4 left-4 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 text-2xl"><i class="fas fa-times"></i></button>
+            <h3 class="text-2xl font-extrabold text-gold text-center mb-6">حجز موعد</h3>
+            <form onsubmit="handleBookingModal(event)" class="space-y-5">
+                <input type="text" id="mName" required class="w-full p-3.5 rounded-xl border border-gold/20 bg-white/50 dark:bg-navy/50" placeholder="الاسم الكامل" />
+                <input type="tel" id="mPhone" required class="w-full p-3.5 rounded-xl border border-gold/20 bg-white/50 dark:bg-navy/50" placeholder="05xxxxxxxx" />
+                <select id="mService" class="w-full p-3.5 rounded-xl border border-gold/20 bg-white/50 dark:bg-navy/50">
+                    <option>بوتوكس / فيلر</option>
+                    <option>مورفيوس</option>
+                    <option>علاج تساقط الشعر</option>
+                    <option>استشارة جلدية</option>
+                </select>
+                <button type="submit" class="w-full btn-gold py-4 rounded-xl flex items-center justify-center gap-2 text-base"><i class="fab fa-whatsapp"></i> إرسال عبر الواتساب</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ===== FLOATING WHATSAPP ===== -->
+    <div class="fixed bottom-24 left-6 z-30 md:bottom-6">
+        <button onclick="openBooking()" class="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl text-2xl hover:scale-110 transition shadow-green-500/30"><i class="fab fa-whatsapp"></i></button>
+    </div>
+
+    <footer class="bg-navy text-slate-400 py-8 text-center text-sm mt-8 border-t border-gold/10">
+        <p class="font-bold text-gold-light text-lg">د. أحمد المحمد</p>
+        <p>استشاري الجلدية والحقن التجميلي | البورد السعودي والعربي</p>
+        <p class="mt-2">© 2026 جميع الحقوق محفوظة</p>
+    </footer>
+
+    <script async src="https://www.instagram.com/embed.js"></script>
+    <script>
+        // ===== NAVIGATION =====
+        function navigate(id) {
+            document.querySelectorAll('.page-section').forEach(el => el.classList.remove('active'));
+            const target = document.getElementById(id);
+            if (target) target.classList.add('active');
+
+            document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+            const link = document.querySelector(`.nav-link[href="#${id}"]`);
+            if (link) link.classList.add('active');
+
+            document.querySelectorAll('.bottom-nav a').forEach(a => a.classList.remove('active'));
+            const bottom = document.querySelector(`.bottom-nav a[href="#${id}"]`);
+            if (bottom) bottom.classList.add('active');
+
+            window.location.hash = id;
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            if (id === 'gallery') setTimeout(initBA, 200);
+        }
+
+        // ===== MOBILE MENU =====
+        const mobileMenu = document.getElementById('mobileMenu');
+        const overlay = document.getElementById('mobileOverlay');
+
+        function toggleMobile() {
+            mobileMenu.classList.toggle('open');
+            overlay.classList.toggle('show');
+            document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+        }
+
+        function closeMobile() {
+            mobileMenu.classList.remove('open');
+            overlay.classList.remove('show');
+            document.body.style.overflow = '';
+        }
+        overlay.addEventListener('click', closeMobile);
+
+        // ===== DARK MODE =====
+        function toggleDark() {
+            document.documentElement.classList.toggle('dark');
+            localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+        }
+        if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark');
+
+        // ===== BOOKING =====
+        function openBooking() { document.getElementById('bookingModal').classList.remove('hidden');
+            document.getElementById('bookingModal').style.display = 'flex'; }
+
+        function closeBooking() { document.getElementById('bookingModal').style.display = 'none'; }
+
+        function handleBooking(e) {
+            e.preventDefault();
+            sendWhatsApp(document.getElementById('bName').value, document.getElementById('bPhone').value, document
+                .getElementById('bService').value);
+        }
+
+        function handleBookingModal(e) {
+            e.preventDefault();
+            sendWhatsApp(document.getElementById('mName').value, document.getElementById('mPhone').value, document
+                .getElementById('mService').value);
+            closeBooking();
+        }
+
+        function sendWhatsApp(name, phone, service) {
+            if (!name || !phone) return alert('يرجى ملء جميع الحقول');
+            const msg =
+                `السلام عليكم د. أحمد، أود حجز موعد.\nالاسم: ${name}\nالجوال: ${phone}\nالخدمة: ${service}`;
+            window.open(`https://wa.me/966507104563?text=${encodeURIComponent(msg)}`, '_blank');
+        }
+
+        // ===== FAQ =====
+        function toggleFaq(btn) {
+            const parent = btn.closest('.glass-card');
+            const answer = parent.querySelector('.faq-answer');
+            btn.classList.toggle('open');
+            answer.classList.toggle('open');
+        }
+
+        // ===== BEFORE / AFTER =====
+        function initBA() {
+            document.querySelectorAll('.ba-slider:not([data-init])').forEach(slider => {
+                slider.dataset.init = true;
+                const after = slider.querySelector('.ba-after');
+                const handle = slider.querySelector('.ba-handle');
+                let dragging = false;
+
+                function update(clientX) {
+                    const rect = slider.getBoundingClientRect();
+                    let x = clientX - rect.left;
+                    x = Math.max(0, Math.min(x, rect.width));
+                    const pct = (x / rect.width) * 100;
+                    after.style.width = pct + '%';
+                    handle.style.left = pct + '%';
+                }
+
+                const onStart = (e) => {
+                    dragging = true;
+                    const cx = e.touches ? e.touches[0].clientX : e.clientX;
+                    update(cx);
+                };
+                const onMove = (e) => {
+                    if (!dragging) return;
+                    const cx = e.touches ? e.touches[0].clientX : e.clientX;
+                    update(cx);
+                };
+                const onEnd = () => { dragging = false; };
+
+                slider.addEventListener('mousedown', onStart);
+                slider.addEventListener('touchstart', onStart, { passive: true });
+                window.addEventListener('mousemove', onMove);
+                window.addEventListener('touchmove', onMove, { passive: true });
+                window.addEventListener('mouseup', onEnd);
+                window.addEventListener('touchend', onEnd);
+
+                const rect = slider.getBoundingClientRect();
+                update(rect.left + rect.width / 2);
+            });
+        }
+
+        // ===== SCROLL REVEAL =====
+        function initReveal() {
+            const els = document.querySelectorAll('.reveal');
+            const obs = new IntersectionObserver((entries) => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) {
+                        e.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.12, rootMargin: '0px 0px -20px 0px' });
+            els.forEach(el => obs.observe(el));
+        }
+
+        // ===== PROGRESS BAR =====
+        function initProgress() {
+            const bar = document.getElementById('progressBar');
+            window.addEventListener('scroll', () => {
+                const st = window.scrollY;
+                const dh = document.documentElement.scrollHeight - window.innerHeight;
+                bar.style.width = dh > 0 ? (st / dh) * 100 + '%' : '0%';
+            });
+        }
+
+        // ===== SCROLL TOP =====
+        function initScrollTop() {
+            const btn = document.getElementById('scrollTop');
+            window.addEventListener('scroll', () => {
+                btn.classList.toggle('visible', window.scrollY > 400);
+            });
+        }
+
+        // ===== LOAD =====
+        window.addEventListener('load', () => {
+            const hash = location.hash.substring(1) || 'home';
+            navigate(hash);
+            initBA();
+            initReveal();
+            initProgress();
+            initScrollTop();
+            // إضافة تأثير reveal على العناصر الموجودة
+            document.querySelectorAll('.reveal').forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight) el.classList.add('visible');
+            });
+        });
+
+        window.addEventListener('hashchange', () => {
+            const hash = location.hash.substring(1) || 'home';
+            navigate(hash);
+        });
+    </script>
+</body>
+</html>
