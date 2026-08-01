@@ -183,7 +183,9 @@ Skin Doctor Riyadh
       }
     }
   </script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
+<script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <style>
     /* ===== BASE ===== */
     *,
@@ -1337,52 +1339,150 @@ Skin Doctor Riyadh
       </div>
     </section>
 
-    <!-- ===== REVIEWS ===== -->
-    <section id="reviews" class="page-section py-16 px-4 max-w-7xl mx-auto">
-      <div class="text-center mb-12">
-        <div class="inline-flex items-center gap-2 bg-rose-50 dark:bg-rose-900/20 text-rose-600 dark:text-rose-300 px-4 py-2 rounded-full text-sm font-bold mb-4"><i class="fas fa-star"></i> آراء المرضى</div>
-        <h2 class="text-4xl font-extrabold text-navy dark:text-white">ماذا يقولون عنا؟</h2>
-      </div>
-      <div class="grid md:grid-cols-3 gap-6 mb-8" id="reviewsGrid">
-        <div class="glass-card p-8 rounded-3xl text-center review-item">
-          <div class="text-yellow-400 text-2xl mb-3">★★★★★</div>
-          <p class="leading-relaxed">"أفضل دكتور جلدية، نتائج البوتكس طبيعية ويده خفيفة جداً."</p>
-          <span class="font-bold text-gold mt-4 block">سارة القحطاني</span>
-          <span class="text-xs text-slate-400">منذ 3 أيام</span>
-        </div>
-        <div class="glass-card p-8 rounded-3xl text-center review-item">
-          <div class="text-yellow-400 text-2xl mb-3">★★★★★</div>
-          <p class="leading-relaxed">"المورفيوس مع د. أحمد فرق كبير في بشرتي، أنصح به بشدة."</p>
-          <span class="font-bold text-gold mt-4 block">محمد القحطاني</span>
-          <span class="text-xs text-slate-400">منذ أسبوع</span>
-        </div>
-        <div class="glass-card p-8 rounded-3xl text-center review-item">
-          <div class="text-yellow-400 text-2xl mb-3">★★★★★</div>
-          <p class="leading-relaxed">"علاج تساقط الشعر غير حياتي، بروتوكول علمي ومتابعة ممتازة."</p>
-          <span class="font-bold text-gold mt-4 block">فاطمة المطيري</span>
-          <span class="text-xs text-slate-400">منذ 5 أيام</span>
-        </div>
-      </div>
-      <div class="glass-card p-8 rounded-3xl max-w-lg mx-auto">
-        <h4 class="text-xl font-bold mb-4">أضف تقييمك</h4>
-        <form onsubmit="addReview(event)" class="space-y-4">
-          <input type="text" id="reviewName" required placeholder="اسمك" class="w-full p-3 rounded-xl border border-slate-200/80 bg-white dark:bg-navy/50" />
-          <textarea id="reviewText" required placeholder="تقييمك..." rows="3" class="w-full p-3 rounded-xl border border-slate-200/80 bg-white dark:bg-navy/50"></textarea>
-          <div class="flex items-center gap-4">
-            <span class="text-sm font-bold">التقييم:</span>
-            <div class="flex gap-1 text-2xl text-slate-300" id="ratingStars">
-              <span onclick="setRating(1)" class="cursor-pointer hover:text-gold transition" role="button" tabindex="0" aria-label="تقييم نجمة واحدة">☆</span>
-              <span onclick="setRating(2)" class="cursor-pointer hover:text-gold transition" role="button" tabindex="0" aria-label="تقييم نجمتين">☆</span>
-              <span onclick="setRating(3)" class="cursor-pointer hover:text-gold transition" role="button" tabindex="0" aria-label="تقييم ثلاث نجوم">☆</span>
-              <span onclick="setRating(4)" class="cursor-pointer hover:text-gold transition" role="button" tabindex="0" aria-label="تقييم أربع نجوم">☆</span>
-              <span onclick="setRating(5)" class="cursor-pointer hover:text-gold transition" role="button" tabindex="0" aria-label="تقييم خمس نجوم">☆</span>
-            </div>
-            <input type="hidden" id="reviewRating" value="5" />
+   <!-- ===== REVIEWS ===== -->
+<section id="reviews" class="page-section py-16 px-4 max-w-7xl mx-auto">
+
+  <div class="text-center mb-12">
+    <div class="inline-flex items-center gap-2 bg-rose-50 dark:bg-rose-900/20 text-rose-600 dark:text-rose-300 px-4 py-2 rounded-full text-sm font-bold mb-4">
+      <i class="fas fa-star"></i> آراء المرضى
+    </div>
+
+    <h2 class="text-4xl font-extrabold text-navy dark:text-white">
+      ماذا يقولون عنا؟
+    </h2>
+
+    <p class="text-slate-500 mt-3">
+      تقييمات وتجارب المرضى مع خدمات العيادة
+    </p>
+  </div>
+
+
+  <!-- Reviews Slider -->
+  <div class="swiper reviewsSwiper mb-10">
+    <div class="swiper-wrapper">
+
+
+      <!-- Review 1 -->
+      <div class="swiper-slide">
+        <div class="glass-card p-8 rounded-3xl text-center">
+
+          <div class="text-yellow-400 text-2xl mb-3">
+            ★★★★★
           </div>
-          <button type="submit" class="btn-gold w-full py-3 rounded-xl">نشر التقييم</button>
-        </form>
+
+          <p class="leading-relaxed">
+            "أفضل دكتور جلدية، نتائج البوتكس طبيعية ويده خفيفة جداً."
+          </p>
+
+          <span class="font-bold text-gold mt-4 block">
+            سارة القحطاني
+          </span>
+
+          <span class="text-xs text-slate-400">
+            منذ 3 أيام
+          </span>
+
+        </div>
       </div>
-    </section>
+
+
+
+      <!-- Review 2 -->
+      <div class="swiper-slide">
+
+        <div class="glass-card p-8 rounded-3xl text-center">
+
+          <div class="text-yellow-400 text-2xl mb-3">
+            ★★★★★
+          </div>
+
+          <p class="leading-relaxed">
+            "المورفيوس مع د. أحمد فرق كبير في بشرتي، أنصح به بشدة."
+          </p>
+
+          <span class="font-bold text-gold mt-4 block">
+            محمد القحطاني
+          </span>
+
+          <span class="text-xs text-slate-400">
+            منذ أسبوع
+          </span>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- Review 3 -->
+      <div class="swiper-slide">
+
+        <div class="glass-card p-8 rounded-3xl text-center">
+
+          <div class="text-yellow-400 text-2xl mb-3">
+            ★★★★★
+          </div>
+
+          <p class="leading-relaxed">
+            "علاج تساقط الشعر غير حياتي، بروتوكول علمي ومتابعة ممتازة."
+          </p>
+
+          <span class="font-bold text-gold mt-4 block">
+            فاطمة المطيري
+          </span>
+
+          <span class="text-xs text-slate-400">
+            منذ 5 أيام
+          </span>
+
+        </div>
+
+      </div>
+
+
+
+    </div>
+
+
+    <!-- Pagination -->
+    <div class="swiper-pagination mt-6"></div>
+
+  </div>
+
+
+
+  <!-- Google Buttons -->
+
+  <div class="flex flex-col md:flex-row justify-center gap-4 mb-12">
+
+
+    <!-- غير الرابط هنا -->
+    <a href="#"
+       target="_blank"
+       class="btn-gold px-8 py-3 rounded-xl flex items-center justify-center gap-2">
+
+      <i class="fab fa-google"></i>
+      عرض تقييمات Google
+
+    </a>
+
+
+
+    <!-- غير الرابط هنا -->
+    <a href="#"
+       target="_blank"
+       class="bg-navy text-white px-8 py-3 rounded-xl flex items-center justify-center gap-2">
+
+      <i class="fas fa-pen"></i>
+      أضف تقييمك على Google
+
+    </a>
+
+
+  </div>
+
+
+</section>
 
     <!-- ===== CONTACT ===== -->
     <section id="contact" class="page-section py-16 px-4 max-w-7xl mx-auto">
@@ -1906,6 +2006,50 @@ Skin Doctor Riyadh
     });
     contactObserver.observe(document.getElementById('contact'), { attributes: true, attributeFilter: ['class'] });
   </script>
+
+  <script>
+
+window.addEventListener("load", function(){
+
+new Swiper(".reviewsSwiper", {
+
+loop:true,
+
+autoplay:{
+delay:3500,
+disableOnInteraction:false
+},
+
+pagination:{
+el:".swiper-pagination",
+clickable:true
+},
+
+
+breakpoints:{
+
+0:{
+slidesPerView:1,
+spaceBetween:20
+},
+
+768:{
+slidesPerView:2,
+spaceBetween:20
+},
+
+1024:{
+slidesPerView:3,
+spaceBetween:30
+}
+
+}
+
+});
+
+});
+
+</script>
   <script async src="https://www.instagram.com/embed.js"></script>
 </body>
 </html>
